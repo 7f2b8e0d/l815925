@@ -108,14 +108,10 @@
 
   var PACKS = { en: EN };
 
-  /* Called by language pack files. arr = array of strings following KEYS order */
-  window.registerLang = function (code, arr) {
-    if (!arr || arr.length !== KEYS.length) {
-      console.warn('[i18n] pack "' + code + '" has ' + (arr ? arr.length : 0) + ' entries, expected ' + KEYS.length);
-    }
-    var dict = {};
-    for (var i = 0; i < KEYS.length; i++) dict[KEYS[i]] = arr[i];
-    PACKS[code] = dict;
+  /* Called by language pack files. data = object of key -> translated string
+     (missing keys fall back to English at apply time) */
+  window.registerLang = function (code, data) {
+    PACKS[code] = data || {};
   };
 
   var STORAGE_KEY = 'ck_lang';
