@@ -42,7 +42,7 @@
     hero_badge: 'Factory-Direct · Since 2009',
     hero_title1: 'Precision Reborn.',
     hero_title2: 'Power Delivered Worldwide.',
-    hero_sub: 'Premium remanufactured & low-mileage used engines for Toyota, Land Rover and Audi — built at our own factory, dyno-tested, and shipped to every corner of the globe.',
+    hero_sub: 'Premium remanufactured & newly assembled engines for Toyota, Land Rover and Audi — built at our own factory, dyno-tested, and shipped to every corner of the globe.',
     hero_cta1: 'Explore Engines', hero_cta2: 'Get a Quote', hero_brands: 'Specialists in',
     stat_years: 'Years of Expertise', stat_engines: 'Engines Delivered',
     stat_countries: 'Countries Served', stat_tested: 'Dyno-Tested Output',
@@ -58,10 +58,10 @@
     why4_t: 'Expert Support',
     why4_d: 'Engine-code matching, fitment verification and after-sales guidance from engineers who rebuild these units every day.',
     prod_kicker: 'Our Engines',
-    prod_title: 'Remanufactured & Used Engine Range',
+    prod_title: 'Remanufactured & Newly Assembled Engine Range',
     prod_sub: 'Complete assemblies and long blocks for the platforms we know best — Toyota first, followed by Land Rover and Audi.',
     tab_all: 'All',
-    badge_reman: 'Remanufactured', badge_used: 'Used · Tested',
+    badge_reman: 'Remanufactured · Tested', badge_used: 'Newly Assembled · Tested',
     desc_reman: 'Fully remanufactured to OE specification. Complete assembly, 100% hot-run dyno-tested before shipment.',
     desc_used: 'Low-mileage original unit, compression & leak-down tested, cleaned and sealed — ready to install.',
     prod_inquire: 'Inquire Now →',
@@ -102,7 +102,7 @@
     ct_tel_hint: 'Sales hotline — Mon–Sun 8:00–22:00 (GMT+8)',
     ct_phone2: 'Export Department',
     ct_tel2_hint: 'Shipping, documents & after-sales support',
-    f_tagline: 'Factory-direct remanufactured & used engines for Toyota, Land Rover and Audi. Precision reborn, power delivered worldwide.',
+    f_tagline: 'Factory-direct remanufactured & newly assembled engines for Toyota, Land Rover and Audi. Precision reborn, power delivered worldwide.',
     f_nav: 'Navigate', f_contact: 'Contact', f_rights: 'All rights reserved.'
   };
 
