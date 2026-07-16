@@ -41,7 +41,12 @@
 
   langBtn.addEventListener('click', function (e) {
     e.stopPropagation();
-    langPanel.classList.contains('open') ? closePanel() : openPanel();
+    if (langPanel.classList.contains('open')) {
+      closePanel();
+    } else {
+      setNavOpen(false);
+      openPanel();
+    }
   });
   langSearch.addEventListener('input', function () { buildLangList(this.value); });
   langPanel.addEventListener('click', function (e) { e.stopPropagation(); });
@@ -60,11 +65,35 @@
   /* ---------- mobile nav ---------- */
   var navToggle = document.getElementById('navToggle');
   var mainNav = document.getElementById('mainNav');
-  navToggle.addEventListener('click', function () {
-    mainNav.classList.toggle('open');
+
+  function setNavOpen(open) {
+    mainNav.classList.toggle('open', open);
+    navToggle.classList.toggle('open', open);
+    document.body.classList.toggle('nav-open', open);
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  navToggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    closePanel();
+    setNavOpen(!mainNav.classList.contains('open'));
   });
   mainNav.addEventListener('click', function (e) {
-    if (e.target.tagName === 'A') mainNav.classList.remove('open');
+    if (e.target.tagName === 'A') setNavOpen(false);
+  });
+  document.addEventListener('click', function (e) {
+    if (!mainNav.classList.contains('open')) return;
+    if (mainNav.contains(e.target) || navToggle.contains(e.target)) return;
+    setNavOpen(false);
+  });
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 900) setNavOpen(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      setNavOpen(false);
+      closePanel();
+    }
   });
 
   /* ---------- product filter tabs ---------- */
